@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "NYU Analytics Cookie Cleaner",
+  "version": "1.0.0",
+  "description": "Automatically removes shared .nyu.edu cookies whose names begin with _ga_.",
+  "minimum_chrome_version": "130",
+  "permissions": ["cookies"],
+  "host_permissions": ["*://nyu.edu/*"],
+  "background": { "service_worker": "service-worker.js" },
+  "incognito": "not_allowed",
+  "content_security_policy": {
+    "extension_pages": "default-src 'none'; script-src 'self'; object-src 'none'; connect-src 'none'"
+  }
+}
